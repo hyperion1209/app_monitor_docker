@@ -1,6 +1,7 @@
 ## Pre-requisites
 - docker
 - git
+- make
 
 ## Installation and Operation
 1. Clone the repository

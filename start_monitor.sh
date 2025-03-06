@@ -14,4 +14,7 @@ if [ ! -f "$APP_DIR/config.json" ]; then
 fi
 
 
-docker run -d --rm --name app_monitor -v $APP_DIR:/var/lib/app_monitor app_monitor
+docker run -d --rm \
+  --name app_monitor \
+  -v $APP_DIR:/var/lib/app_monitor \
+  app_monitor

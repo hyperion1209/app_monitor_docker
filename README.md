@@ -33,3 +33,9 @@ Using your favorite editor create a file named `config.json` in the `app_dir` di
 cd app_monitor_docker
 ./start_monitor.sh <path_to_config_dir>
 ```
+5. View log messages
+Log output can be seen in the run.log file in the `app_dir` directory.
+```bash
+tail -f app_dir/run.log
+
+```

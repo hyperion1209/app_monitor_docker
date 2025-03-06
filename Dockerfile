@@ -8,9 +8,8 @@ RUN \
   python3 -m pip install --no-cache-dir build
 
   git clone https://github.com/hyperion1209/app_monitor.git /app_monitor
-  cd /app_monitor
+  cd /app_monitor || exit
   python3 -m build
-  python3 -m pip install dist/*.whl
 EOF
 
 FROM python:3.11

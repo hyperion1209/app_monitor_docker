@@ -6,11 +6,8 @@ RUN \
 <<EOF
   python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel
   python3 -m pip install --no-cache-dir build
-EOF
 
-RUN \
-<<EOF
-  git clone https://github.com/hyperion1209/app_monitor.git
+  git clone https://github.com/hyperion1209/app_monitor.git /app_monitor
   cd /app_monitor
   python3 -m build
   python3 -m pip install dist/*.whl

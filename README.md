@@ -26,7 +26,8 @@ Using your favorite editor create a file named `config.json` in the `app_dir` di
         "https://endpoint2/path/to/status"
     ],
     "check_interval": 1,
-    "warn_threshold": 1.2
+    "warn_threshold": 1.2,
+    "retries": 3
 }
 ```
 4. Run the application

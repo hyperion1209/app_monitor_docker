@@ -20,20 +20,17 @@ SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 
 RUN \
 <<EOF
+  groupadd --force --gid 1000 --non-unique monitor
   useradd -m -r \
-	-g users \
 	-d /home/monitor \
-	-s /sbin/nologin \
+  --uid 1000 \
+  --gid 1000 \
+  --non-unique \
 	-c "App Monitor User" \
 	monitor
-  chmod 755 /home/monitor
 
   mkdir -p /var/lib/app_monitor
-
-  chown -R monitor:users \
-    /var/lib/app_monitor
-
-  chmod 755 \
+  chown -R monitor:monitor \
     /var/lib/app_monitor
 EOF
 
